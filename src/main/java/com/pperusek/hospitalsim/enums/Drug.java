@@ -1,10 +1,11 @@
-package com.pperusek.edgetech.enums;
+package com.pperusek.hospitalsim.enums;
 
 import java.util.Arrays;
 
 public enum Drug {
 	Aspirin("As"), Antibiotic("An"), Insulin("I"), Paracetamol("P");
 
+	/** Used when parsing from arguments. */
 	private String textRepresentation;
 
 	private Drug(String text) {

@@ -1,10 +1,10 @@
-package com.pperusek.edgetech;
+package com.pperusek.hospitalsim;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.pperusek.edgetech.enums.Drug;
-import com.pperusek.edgetech.enums.PatientState;
+import com.pperusek.hospitalsim.enums.Drug;
+import com.pperusek.hospitalsim.enums.PatientState;
 
 public class EnumsTest {
 	

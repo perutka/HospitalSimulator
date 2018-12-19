@@ -1,6 +1,6 @@
-package com.pperusek.edgetech;
+package com.pperusek.hospitalsim;
 
-import static com.pperusek.edgetech.interfaces.ImmutablePatientsTreatment.of;
+import static com.pperusek.hospitalsim.interfaces.ImmutablePatientsTreatment.of;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -12,9 +12,10 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import com.pperusek.edgetech.enums.Drug;
-import com.pperusek.edgetech.enums.PatientState;
-import com.pperusek.edgetech.interfaces.PatientsTreatment;
+import com.pperusek.hospitalsim.Parser;
+import com.pperusek.hospitalsim.enums.Drug;
+import com.pperusek.hospitalsim.enums.PatientState;
+import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 
 @RunWith(Parameterized.class)
 public class ParserTest {
@@ -39,8 +40,7 @@ public class ParserTest {
 
 	@Test
 	public void testParser() {
-		Parser parser = new Parser();
-		Assert.assertEquals("Result", result, parser.parse(arguments));
+		Assert.assertEquals("Result", result, Parser.parse(arguments));
 	}
 
 }

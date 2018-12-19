@@ -1,6 +1,8 @@
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\data\PatientTreatment.java
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\enums\PatientState.java
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\Application.java
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\enums\Drug.java
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\Parser.java
-C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\edgetech\interfaces\ParserInterface.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\enums\Drug.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\enums\PatientState.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\interfaces\PatientsTreatment.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\Parser.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\interfaces\Transition.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\Application.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\Display.java
+C:\Users\Primoz\eclipse-workspace\edgetech\src\main\java\com\pperusek\hospitalsim\Transitor.java

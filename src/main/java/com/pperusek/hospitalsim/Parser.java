@@ -1,14 +1,14 @@
-package com.pperusek.edgetech;
+package com.pperusek.hospitalsim;
 
 import java.security.InvalidParameterException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.pperusek.edgetech.enums.Drug;
-import com.pperusek.edgetech.enums.PatientState;
-import com.pperusek.edgetech.interfaces.ImmutablePatientsTreatment;
-import com.pperusek.edgetech.interfaces.PatientsTreatment;
+import com.pperusek.hospitalsim.interfaces.ImmutablePatientsTreatment;
+import com.pperusek.hospitalsim.enums.Drug;
+import com.pperusek.hospitalsim.enums.PatientState;
+import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 
 public class Parser {
 
@@ -16,7 +16,7 @@ public class Parser {
 	 * Parses the received arguments to PatientsTreatment. The arguments should be
 	 * of format: "H,F" "As"
 	 */
-	public PatientsTreatment parse(List<String> args) {
+	public static PatientsTreatment parse(List<String> args) {
 		argumentsLengthIsValid(args.size());
 
 		return ImmutablePatientsTreatment.of(parsePatientsStates(args.get(0)), parseDrug(args.get(1)));
@@ -29,7 +29,7 @@ public class Parser {
 	 * @param length
 	 *            of the passed parameters
 	 */
-	private void argumentsLengthIsValid(int length) {
+	private static void argumentsLengthIsValid(int length) {
 		int numberOfParameters = 2;
 
 		if (length != numberOfParameters) {
@@ -46,7 +46,7 @@ public class Parser {
 	 *            containing patient states
 	 * @return list of the parsed patient states
 	 */
-	private List<PatientState> parsePatientsStates(String text) {
+	private static List<PatientState> parsePatientsStates(String text) {
 		String[] splitText = text.split(",");
 
 		return Arrays.stream(splitText).map(PatientState::fromString).collect(Collectors.toList());
@@ -60,7 +60,7 @@ public class Parser {
 	 *            containing drug abbreviations
 	 * @return list of the parsed drugs
 	 */
-	private List<Drug> parseDrug(String text) {
+	private static List<Drug> parseDrug(String text) {
 		String[] splitText = text.split(",");
 
 		return Arrays.stream(splitText).map(Drug::fromString).collect(Collectors.toList());
