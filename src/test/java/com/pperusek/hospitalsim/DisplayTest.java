@@ -18,6 +18,9 @@ import org.junit.runners.Parameterized.Parameters;
 
 import com.pperusek.hospitalsim.enums.PatientState;
 
+/**
+ * A parameterized test of the {@link Display#makeStringOfPatientStatesOccurrences(List)} method.
+ */
 @RunWith(Parameterized.class)
 public class DisplayTest {
 	

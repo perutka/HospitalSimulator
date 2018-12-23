@@ -1,11 +1,11 @@
-com\pperusek\hospitalsim\interfaces\ImmutableTransition.class
 com\pperusek\hospitalsim\Transitor.class
 com\pperusek\hospitalsim\Application.class
 com\pperusek\hospitalsim\Display.class
-com\pperusek\hospitalsim\interfaces\ImmutablePatientsTreatment.class
-com\pperusek\hospitalsim\interfaces\Transition$Matcher.class
-com\pperusek\hospitalsim\interfaces\Transition.class
 com\pperusek\hospitalsim\enums\Drug.class
 com\pperusek\hospitalsim\interfaces\PatientsTreatment.class
 com\pperusek\hospitalsim\enums\PatientState.class
+com\pperusek\hospitalsim\interfaces\ImmutableTransition.class
+com\pperusek\hospitalsim\interfaces\ImmutablePatientsTreatment.class
+com\pperusek\hospitalsim\interfaces\Transition$Matcher.class
+com\pperusek\hospitalsim\interfaces\Transition.class
 com\pperusek\hospitalsim\Parser.class

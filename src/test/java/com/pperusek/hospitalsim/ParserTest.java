@@ -17,6 +17,9 @@ import com.pperusek.hospitalsim.enums.Drug;
 import com.pperusek.hospitalsim.enums.PatientState;
 import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 
+/**
+ * A parameterized test of the {@link Parser#parse(List)} method.
+ */
 @RunWith(Parameterized.class)
 public class ParserTest {
 
