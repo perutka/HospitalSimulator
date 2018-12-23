@@ -1,1 +1,4 @@
 # HospitalSimulator
+
+## Setup
+

@@ -1,7 +1,11 @@
 package com.pperusek.hospitalsim.enums;
 
+import java.security.InvalidParameterException;
 import java.util.Arrays;
 
+/**
+ * A drug type that can be used in a treatment.
+ */
 public enum Drug {
 	Aspirin("As"), Antibiotic("An"), Insulin("I"), Paracetamol("P");
 
@@ -12,11 +16,15 @@ public enum Drug {
 		this.textRepresentation = text;
 	}
 
+	/**
+	 * Gets {@link Drug} based on a string.
+	 * @param text representation
+	 * @return drug represented by the text
+	 */
 	public static Drug fromString(String text) {
 		return Arrays.stream(Drug.values())
 			.filter(v -> v.textRepresentation.equals(text))
 			.findFirst()
-			.orElseThrow(() -> new IllegalArgumentException("unknown Drug value: " + text));
-		// TODO have to define better exception
+			.orElseThrow(() -> new InvalidParameterException("Unknown Drug value received: " + text));
 	}
 }

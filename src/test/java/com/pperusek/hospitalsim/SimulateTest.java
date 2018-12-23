@@ -18,7 +18,7 @@ import com.pperusek.hospitalsim.interfaces.ImmutablePatientsTreatment;
 import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 
 /**
- * A test of the {@link Transitor#simulate(PatientsTreatment)} method. As the
+ * A test of the {@link Transitor#treatPatients(PatientsTreatment)} method. As the
  * transitions are already tested in {@link SingleTransitionTest}, here we only
  * test if it works when passing multiple patients.
  */
@@ -31,6 +31,6 @@ public class SimulateTest {
 
 		PatientsTreatment treatmentData = ImmutablePatientsTreatment.of(initPatientsStates, asList(Drug.Aspirin));
 
-		Assert.assertEquals(endPatientsStates, Transitor.simulate(treatmentData));
+		Assert.assertEquals(endPatientsStates, Transitor.treatPatients(treatmentData));
 	}
 }

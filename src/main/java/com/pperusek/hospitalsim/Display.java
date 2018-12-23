@@ -56,7 +56,7 @@ public class Display {
 		// Count occurrences of the PatientState.
 		int occurrences = Collections.frequency(patientStates, patientState);
 		// Create the String
-		return String.join(ONE_PATIENT_STATE_OCCURENCES_JOIN_STRING, patientState.toTextRepresentation(),
+		return String.join(ONE_PATIENT_STATE_OCCURENCES_JOIN_STRING, patientState.getTextRepresentation(),
 				Integer.toString(occurrences));
 	}
 }

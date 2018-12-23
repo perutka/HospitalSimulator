@@ -10,6 +10,9 @@ import com.pperusek.hospitalsim.enums.Drug;
 import com.pperusek.hospitalsim.enums.PatientState;
 import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 
+/**
+ * Parsing of the passed arguments used in the patient treatment simulation.
+ */
 public class Parser {
 
 	/**
@@ -34,7 +37,7 @@ public class Parser {
 
 		if (length != numberOfParameters) {
 			throw new InvalidParameterException(
-					String.format("Number of passed agruments {}. Valid number is {}.", length, numberOfParameters));
+					String.format("Number of passed agruments is %d. Valid number is %d.", length, numberOfParameters));
 		}
 	}
 

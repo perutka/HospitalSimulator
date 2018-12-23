@@ -21,6 +21,10 @@ import com.pperusek.hospitalsim.enums.PatientState;
 import com.pperusek.hospitalsim.interfaces.PatientsTreatment;
 import com.pperusek.hospitalsim.interfaces.Transition;
 
+/**
+ * Executes transitions of {@link PatientState} based on List of {@link Drug}
+ * used in treatment.
+ */
 public class Transitor {
 
 	/** List of possible transitions. */
@@ -71,12 +75,18 @@ public class Transitor {
 				// If there is no state, then return the initial state (there was no transition)
 				.orElse(initState);
 	}
-	
-	public static List<PatientState> simulate(PatientsTreatment treatmentInput) {
+
+	/**
+	 * Treats patients passed in the treatmentInput argument based on drugs passed
+	 * in the treatmentInput argument.
+	 * 
+	 * @param treatmentInput
+	 *            patients to be treated with a list of drugs
+	 * @return list of patients states after the treatment
+	 */
+	public static List<PatientState> treatPatients(PatientsTreatment treatmentInput) {
 		Transitor transitor = new Transitor(treatmentInput.getTretmentDrug());
-		return treatmentInput.getPatientsStates()
-				.stream()
-				.map(transitor::transition2NewPatientState)
+		return treatmentInput.getPatientsStates().stream().map(transitor::transition2NewPatientState)
 				.collect(Collectors.toList());
 	}
 }
